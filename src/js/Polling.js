@@ -10,7 +10,7 @@ export default class Polling {
   }
 
   init() {
-    ajax.getJSON(`http://localhost:7070/messages/unread`)
+    ajax.getJSON(`https://jsrxjs.herokuapp.com/messages/unread`)
       .pipe(
         map(response => response.messages),
         catchError(error => {
